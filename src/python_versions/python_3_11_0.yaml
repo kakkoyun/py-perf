@@ -1,0 +1,35 @@
+major_version: 3
+minor_version: 11
+patch_version: 0
+py_object:
+  ob_type: 8
+py_string:
+  data: 48
+  size: -1
+py_type_object:
+  tp_name: 24
+py_thread_state:
+  next: 8
+  interp: 16
+  frame: -1
+  thread_id: 152
+  native_thread_id: 160
+  cframe: 56
+py_cframe:
+  current_frame: 8
+py_interpreter_state:
+  tstate_head: 16
+py_runtime_state:
+  interp_main: 48
+py_frame_object:
+  f_back: 48
+  f_code: 32
+  f_lineno: -1
+  f_localsplus: 72
+py_code_object:
+  co_filename: 112
+  co_name: 120
+  co_varnames: 96
+  co_firstlineno: 72
+py_tuple_object:
+  ob_item: 24

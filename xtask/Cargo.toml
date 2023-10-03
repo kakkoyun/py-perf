@@ -1,0 +1,19 @@
+[package]
+name = "xtask"
+version = "0.1.0"
+edition = "2021"
+description = "An helper task to generate memory offsets for py-perf to use against CPython."
+repository = "https://github.com/kakkoyu/py-perf"
+authors = ["Kemal Akkoyun <kakkoyun@gmail.com>"]
+keywords = ["bpf", "ebpf", "python", "CPython", "profiler"]
+license = "Apache-2.0"
+readme = "README.md"
+categories = ["development-tools", "profiling"]
+
+[dependencies]
+py-perf = { path = ".." }
+# TODO(kakkoyun): Send a patch to upstream.
+py-spy = { path = "../../../Sandbox/Profilers/py-spy" }
+# py-spy = { git = "ssh://git@github.com/kakkoyun/py-spy.git" }
+memoffset = "0.9"
+serde_yaml = "0.9"

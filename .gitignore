@@ -12,3 +12,21 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Added by cargo
+
+/target
+
+src/bpf/py-perf.rs
+
+py-perf_out*
+py-perf_flame*
+
+TODO.md
+
+/tmp
+py-perf_*.pb
+py-perf_*.pb.gz
+py-perf_*.txt
+py-perf_*.svg
+py-perf_*.json

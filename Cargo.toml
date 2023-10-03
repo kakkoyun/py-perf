@@ -1,0 +1,61 @@
+[package]
+name = "py-perf"
+description = "A Proof-of-concept low-overhead sampling CPU profiler written in Rust for Python implemented using eBPF."
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/kakkoyun/py-perf"
+authors = ["Kemal Akkoyun <kakkoyun@gmail.com>"]
+keywords = ["bpf", "ebpf", "python", "CPython", "profiler"]
+license = "Apache-2.0"
+categories = ["development-tools", "profiling", "performance"]
+readme = "README.md"
+
+[profile.release]
+lto = true
+
+[dependencies]
+anyhow = { version = "1.0", features = ["backtrace"] }
+chrono = "0.4"
+clap = { version = "4.3", features = ["derive"] }
+crossbeam = "0.8.2"
+ctrlc = "3.4"
+env_logger = "0.10"
+errno = "0.3"
+goblin = "0.7"
+humantime = "2"
+inferno = "0.11"
+libbpf-rs = { version = "0.21", features = ["static"] }
+libc = "0.2"
+log = "0.4"
+nix = "0.26"
+num_cpus = "1.16"
+perf-event-open-sys = "4.0"
+plain = "0.2.3"
+# pprof = { path = "../../Sandbox/Profiling/pprof-rs", features = [
+pprof = { git = "ssh://git@github.com/kakkoyun/py-spy.git", features = [
+    "flamegraph",
+    "inferno",
+    "protobuf",
+    "protobuf-codec",
+] }
+proc-maps = "0.3"
+# py-spy = { path = "../../Sandbox/Profilers/py-spy" }
+# TODO(kakkoyun): Send a patch to upstream.
+py-spy = { git = "ssh://git@github.com/kakkoyun/py-spy.git" }
+remoteprocess = { version = "0.4.12", features = ["unwind"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+thiserror = "1.0"
+time = { version = "0.3.24", features = [
+    "formatting",
+    "local-offset",
+    "macros",
+] }
+
+[build-dependencies]
+bindgen = "0.66"
+libbpf-cargo = "0.21"
+
+[workspace]
+members = [".", "xtask"]
