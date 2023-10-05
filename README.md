@@ -88,7 +88,7 @@ Kernel-space code (eBPF profiler): GNU General Public License, version 2
 - TODO(kakkoyun): Add sections from parca-agent!
 - TODO(kakkoyun): Add reference to bcc, bcc/granulate and linux/tool examples from facebook.
 
-## Features:
+## Features
 
 - Supports profiling Python processes running in Docker containers. Tested using official Python
   Docker images (`python:X.Y`).
@@ -96,7 +96,7 @@ Kernel-space code (eBPF profiler): GNU General Public License, version 2
 - Supports Python compiled in both PIE and non-PIE configurations.
 - Supports Python running standalone and as a library (linked with `libpythonX.Y`).
 
-## Limitations:
+## Limitations
 
 - Architecture: x86_64.
 - Linux kernel version: oldest version tested is 4.14. Versions 4.11-4.14 may work. Required for

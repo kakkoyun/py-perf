@@ -13,7 +13,7 @@ use libbpf_rs::skel::{OpenSkel, SkelBuilder};
 use libbpf_rs::{MapFlags, PerfBufferBuilder, ProgramType};
 
 use anyhow::{bail, Context, Result};
-use crossbeam::channel::{bounded, select, tick, unbounded, Receiver, RecvError};
+use crossbeam::channel::{bounded, select, tick, unbounded, Receiver};
 use plain::Plain;
 use py_spy::version::Version;
 use serde_yaml;

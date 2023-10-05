@@ -31,17 +31,19 @@ nix = "0.26"
 num_cpus = "1.16"
 perf-event-open-sys = "4.0"
 plain = "0.2.3"
-# pprof = { path = "../../Sandbox/Profiling/pprof-rs", features = [
-pprof = { git = "ssh://git@github.com/kakkoyun/py-spy.git", features = [
+
+# TODO(kakkoyun): Send a patch to upstream.
+pprof = { git = "ssh://git@github.com/kakkoyun/pprof-rs.git", features = [
+    # pprof = { path = "../../Sandbox/Profiling/pprof-rs", features = [
     "flamegraph",
     "inferno",
     "protobuf",
-    "protobuf-codec",
+    "protobuf-codec"
 ] }
 proc-maps = "0.3"
-# py-spy = { path = "../../Sandbox/Profilers/py-spy" }
 # TODO(kakkoyun): Send a patch to upstream.
 py-spy = { git = "ssh://git@github.com/kakkoyun/py-spy.git" }
+# py-spy = { path = "../../Sandbox/Profilers/py-spy" }
 remoteprocess = { version = "0.4.12", features = ["unwind"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
@@ -50,7 +52,7 @@ thiserror = "1.0"
 time = { version = "0.3.24", features = [
     "formatting",
     "local-offset",
-    "macros",
+    "macros"
 ] }
 
 [build-dependencies]
