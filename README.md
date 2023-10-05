@@ -5,8 +5,15 @@
 A Proof-of-concept low-overhead sampling CPU profiler written in Rust for Python implemented using eBPF.
 It is heavily "influenced" by [rbperf](https://github.com/javierhonduco/rbperf) and [py-spy](https://github.com/benfred/py-spy).
 
+> [!WARNING]
 > IT IS NOT READY FOR PRODUCTION USE AND IT IS NOT INTENDED TO BE A REPLACEMENT FOR EXISTING TOOLS.
+> It is still considered experimental. Please feel free to contribute or provide feedback!
+
+> [!IMPORTANT]
 > If you are looking for a production-ready tool, please check out [parca-agent](https://github.com/parca-dev/parca-agent) instead.
+
+> [!NOTE]
+> If you are curious how this tool works under the hood, check out the [blog post](https://www.polarsignals.com/blog/posts/2023/10/04/profiling-python-and-ruby-with-ebpf)!
 
 ## Features
 
